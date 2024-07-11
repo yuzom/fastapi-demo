@@ -202,6 +202,23 @@ alembic upgrade head
 Allows you to make requests from a web browser on one domain to a server on a different domain
 By default, FastAPI only allows browsers running on the same domain as our server to make requests to it
 
-### Git
+### Git initialization instructions
 
+Create a repo on github
+
+In terminal:
 git init
+git add --all
+git commit -m "initial commit"
+git branch -M main
+git remote add origin https://github.com/<your_username>/<your_repo_name>.git
+git push -u origin main
+
+### Heroku
+
+Install Heroku and create a free account
+
+In terminal:
+heroku login
+heroku create fastapi-<your_name>
+git push heroku main
