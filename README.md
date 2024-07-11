@@ -216,9 +216,31 @@ git push -u origin main
 
 ### Heroku
 
-Install Heroku and create a free account
+Install Heroku and create a free account; use a github student discount for 24mo free access
 
 In terminal:
 heroku login
 heroku create fastapi-<your_name>
 git push heroku main
+
+### Git update instructions
+
+git add --all
+git push origin main
+git push heroku main
+
+### Troubleshoot heroku
+
+heroku logs -t
+
+### Create heroku postgres db
+
+heroku addons:create heroku-postgresql:essential-0
+Set environment variables by going to https://dashboard.heroku.com/apps/<your_app_name>/settings
+Get the variable names from your postgres instance settings
+
+Restart heroku instance (dyno):
+heroku ps:restart
+
+Get your API URL:
+heroku apps:info <app_name>
